@@ -1,14 +1,17 @@
 #customize-computer
-  #design
-    %h2 Design Your Computer!
-    %h3 Choose from the configuration options below to build your computer
-    - form_for @computer, :html => { :id => 'wizard' }, :builder => WizardFormBuilder do |f|
+  - form_for @computer, :html => { :id => 'wizard' }, :builder => WizardFormBuilder do |f|
+    #design
+      %h2 Design Your Computer!
+      %h3 Choose from the configuration options below to build your computer
       = f.wizard_sections
       = f.section_navigation_links
-  #review
-    %h3 System Specifications
-    %h4
-      Total Price:
-      %span.price $0
-    %h3 My Components
-    %ul.components
+    #review
+      %h3 System Specifications
+      %h4
+        Total Price:
+        %span.price $0
+        = f.hidden_field :price, :value => 0, :class => 'price'
+      %h3 My Components
+      %ul.components
+      .checkout
+        = f.submit "Finish Building My System"
