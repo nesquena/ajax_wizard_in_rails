@@ -72,20 +72,20 @@ ram_memory:
   
 hard_drive:
  - name: 100GB 5400RPM Hard Drive
-   price: 60
+   price: 50
  - name: 250GB 5400RPM Hard Drive
-   price: 60
+   price: 100
  - name: 500GB 5400RPM Hard Drive
-   price: 60
+   price: 120
  - name: 1TB 7200RPM Hard Drive
-   price: 60
+   price: 200
     
 monitors:
  - name: 17inch Monitor
-   price: 400
+   price: 130
  - name: 19inch Monitor
-   price: 400
+   price: 200
  - name: 21inch Monitor
-   price: 400
+   price: 300
  - name: 24inch Monitor
    price: 400
