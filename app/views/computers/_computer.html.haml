@@ -1,0 +1,9 @@
+.computer
+  %p
+    = "Total price is #{number_to_currency(computer.price)}"
+    = link_to '[x]', computer_path(computer), :method => 'delete'
+  %ul.configuration
+    - computer.class.section_types.each do |section|
+      %li
+        = "#{section.titleize}:"
+        = (computer.send(section) || "Not Selected").titleize

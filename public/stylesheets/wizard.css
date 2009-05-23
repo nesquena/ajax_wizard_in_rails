@@ -1,3 +1,30 @@
+#navigation ul {
+  padding: 0;
+  overflow: hidden; }
+  #navigation ul li {
+    float: left;
+    margin-right: 10px;
+    list-style-type: none; }
+    #navigation ul li a {
+      text-decoration: none;
+      display: block;
+      border: 1px solid black;
+      padding: 6px;
+      color: #117911;
+      background-color: #DAFFEC; }
+      #navigation ul li a:hover {
+        background-color: #F5DDB4; }
+
+#computers {
+  overflow: hidden; }
+  #computers .computer {
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    width: 400px;
+    margin-bottom: 15px; }
+
 #customize-computer {
   overflow: hidden; }
   #customize-computer #review {
