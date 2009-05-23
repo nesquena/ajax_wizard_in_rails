@@ -10,7 +10,8 @@
         %h2 Ajax Wizard Sample Application
       #navigation 
         %ul.links
-          %li= link_to "Build Computer"
+          %li= link_to "View Computers", computers_path
+          %li= link_to "Build Computer", new_computer_path
       #content    
         #notice.flash= flash[:notice]
         = yield :layout
