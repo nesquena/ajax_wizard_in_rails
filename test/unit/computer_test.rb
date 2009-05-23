@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class ComputerTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "has section types" do
+    assert_not_nil Computer.section_types
   end
 end
