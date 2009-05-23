@@ -16,9 +16,10 @@ class WizardFormBuilder < ActionView::Helpers::FormBuilder
   end
   
   def radio_button_choice(attribute, choice)
-    choice_value = choice['name'].underscore.downcase
+    price_caption = "[costs #{number_to_currency(choice['price'])}]"
     label_data = content_tag(:span, choice['name'], :class => 'option-name')
-    label_data << content_tag(:span, "[costs #{number_to_currency(choice['price'])}]", :class => 'option-price')
+    label_data << content_tag(:span, price_caption, :class => 'option-price', :rel => choice['price'])
+    choice_value = choice['name'].underscore.downcase
     content_tag(:div, :class => "choice #{attribute}") do
       html = self.radio_button(attribute, choice_value)
       html << self.label(attribute, label_data)
