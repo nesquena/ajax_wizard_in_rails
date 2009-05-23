@@ -12,15 +12,16 @@
 ActiveRecord::Schema.define(:version => 20090512102220) do
 
   create_table "computers", :force => true do |t|
-    t.string "color"
-    t.string "processor"
-    t.string "operating_system"
-    t.string "office_software"
-    t.string "warranty"
-    t.string "ram_memory"
-    t.string "hard_drive"
-    t.string "monitors"
-    t.string "timestamps"
+    t.string  "color"
+    t.string  "processor"
+    t.string  "operating_system"
+    t.string  "office_software"
+    t.string  "warranty"
+    t.string  "ram_memory"
+    t.string  "hard_drive"
+    t.string  "monitors"
+    t.integer "price"
+    t.string  "timestamps"
   end
 
 end

@@ -9,6 +9,7 @@ class CreateComputers < ActiveRecord::Migration
       t.string :ram_memory
       t.string :hard_drive
       t.string :monitors
+      t.integer :price
       t.string :timestamps
     end
   end

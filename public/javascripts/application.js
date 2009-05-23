@@ -17,6 +17,7 @@ WizardForm = Behavior.create({
 	  var totalPrice = 0;
 	  var componentsList = this.element.up('#customize-computer').down('#review ul.components');
 	  var priceEl = this.element.up('#customize-computer').down('#review span.price');
+	  var priceField = this.element.up('#customize-computer').down('#review input.price');
 	  componentsList.update('');
 	  this.element.select('input[type=radio]:checked').each(function(inputEl) {
 	    var description = inputEl.next('label').down('.option-name').innerHTML;
@@ -27,6 +28,7 @@ WizardForm = Behavior.create({
   	  }
 	  }.bind(this));
 	  priceEl.update('$' + totalPrice);
+	  priceField.value = totalPrice;
 	}
 });
 
