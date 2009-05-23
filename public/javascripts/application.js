@@ -1,5 +1,6 @@
 WizardForm = Behavior.create({
 	initialize : function() {
+	  this.setDefaults();
 		this.activateSection("colors");
 		this.updateReview(); 
 	},
@@ -19,7 +20,7 @@ WizardForm = Behavior.create({
 	  var priceEl = this.element.up('#customize-computer').down('#review span.price');
 	  var priceField = this.element.up('#customize-computer').down('#review input.price');
 	  componentsList.update('');
-	  this.element.select('input[type=radio]:checked').each(function(inputEl) {
+	  this.element.select('input[type=radio]').each(function(inputEl) {
 	    var description = inputEl.next('label').down('.option-name').innerHTML;
 	    var price = inputEl.next('label').down('.option-price').innerHTML.match(/\d+/)[0];
   	  if (inputEl.checked) { 
@@ -29,6 +30,11 @@ WizardForm = Behavior.create({
 	  }.bind(this));
 	  priceEl.update('$' + totalPrice);
 	  priceField.value = totalPrice;
+	},
+	setDefaults : function() {
+	  this.element.select('.section').each(function(inputEl) {
+	    inputEl.down('input').checked = true;
+    });
 	}
 });
 
