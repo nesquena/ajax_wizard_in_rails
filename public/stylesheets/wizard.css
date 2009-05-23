@@ -1,0 +1,63 @@
+#customize-computer {
+  overflow: hidden; }
+  #customize-computer #review {
+    float: left;
+    width: 20%;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-left: 0;
+    height: 476px; }
+  #customize-computer #design {
+    float: left;
+    width: 70%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 20px; }
+  #customize-computer #wizard .section {
+    display: none;
+    height: 200px; }
+    #customize-computer #wizard .section div.actions {
+      padding-top: 10px; }
+    #customize-computer #wizard .section div.choice {
+      overflow: hidden; }
+      #customize-computer #wizard .section div.choice input {
+        float: left; }
+      #customize-computer #wizard .section div.choice label {
+        float: left;
+        margin-left: 10px; }
+      #customize-computer #wizard .section div.choice .option-name {
+        float: left;
+        font-weight: bold;
+        min-width: 100px; }
+      #customize-computer #wizard .section div.choice .option-price {
+        float: left;
+        margin-left: 10px;
+        font-style: italic; }
+  #customize-computer #wizard .section.active {
+    display: block; }
+  #customize-computer #wizard ul.navigation {
+    padding: 0;
+    overflow: hidden; }
+    #customize-computer #wizard ul.navigation li {
+      display: block;
+      float: left;
+      border: 1px solid black;
+      margin-right: 10px; }
+      #customize-computer #wizard ul.navigation li a {
+        font-size: 0.9em;
+        outline: none;
+        text-decoration: none;
+        color: blue;
+        background-repeat: no-repeat;
+        height: 75px;
+        width: 75px;
+        text-align: center;
+        display: block;
+        padding: 10px; }
+        #customize-computer #wizard ul.navigation li a:hover {
+          background-color: #BFC7FA; }
+        #customize-computer #wizard ul.navigation li a img {
+          padding-bottom: 10px;
+          border: none; }
+    #customize-computer #wizard ul.navigation li.selected a {
+      background-color: #F6C07F; }
