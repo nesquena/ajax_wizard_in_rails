@@ -1,23 +1,26 @@
 WizardForm = Behavior.create({
 	initialize : function() {
-	  this.reviewEl = new WizardForm.Review(this.element.down('#review'));
 	  this.setDefaults();
-		this.activateSection("colors");
+	  this.reviewEl = new WizardForm.Review(this.element.down('#review'));
 	},
 	onclick : Event.delegate({
-		'a.section-link, a.section-link *' : function(e) { this.activateSection(e.findElement('a').readAttribute('rel')); },
+		'a.section-link, a.section-link *' : function(e) { this.activateSection(e.findElement('a')); e.stop(); },
 		'input[type=radio]' : function(e) { this.reviewEl.updateReview(); }
 	}),
-	activateSection : function(sectionName) {
-		this.element.select('.section').invoke('removeClassName', 'active');
-		this.element.select('.navigation li').invoke('removeClassName', 'selected');
-		this.element.down('.' + sectionName + '.section').addClassName('active');
-		this.element.down('.' + sectionName + '-nav').addClassName('selected');
+	activateSection : function(sectionLink) {
+	  var sectionName = sectionLink.readAttribute('rel');
+	  this._markActiveElement('.' + sectionName + '.section', '.section'      , 'active');
+	  this._markActiveElement('.' + sectionName + '-nav'    , '.navigation li', 'selected');
 	},
 	setDefaults : function() {
+	  this.activateSection(this.element.down('.navigation li a'));
 	  this.element.select('.section').each(function(inputEl) {
 	    inputEl.down('input').checked = true;
     });
+	},
+	_markActiveElement : function(elSelector, elClass, activeClass) {
+	  this.element.select(elClass).invoke('removeClassName', activeClass);
+	  this.element.down(elSelector).addClassName(activeClass);
 	}
 });
 
@@ -27,8 +30,7 @@ WizardForm.Review = Behavior.create({
 	  this.updateReview(); 
   },
   updateReview : function() {
-    this._calculatePrice(); 
-    this._buildComponentsList();
+    this._calculatePrice() || this._buildComponentsList();
 	},
 	_calculatePrice : function() {
 	  var totalPrice = 300;
