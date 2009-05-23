@@ -1,0 +1,91 @@
+# == Schema Information
+# Schema version: 20090512102220
+#
+# Table name: computers
+#
+#  id               :integer(4)      not null, primary key
+#  color            :string(255)
+#  processor        :string(255)
+#  operating_system :string(255)
+#  office_software  :string(255)
+#  warranty         :string(255)
+#  ram_memory       :string(255)
+#  hard_drive       :string(255)
+#  monitors         :string(255)
+#  timestamps       :string(255)
+#
+
+---
+color:
+ - name: "Piano Black"
+   price: 20
+ - name: "Pure White"
+   price: 10
+ - name: "Plum Purple"
+   price: 15
+ - name: "True Blue"
+   price: 30
+
+processor:
+ - name: Intel Celeron 450
+   price: 150
+ - name: Intel Pentium dual core
+   price: 400
+ - name: Intel Core 2 Duo
+   price: 500
+
+operating_system:
+ - name: Windows XP
+   price: 200
+ - name: Windows Vista
+   price: 250
+ - name: Mac OS X
+   price: 120
+ - name: Ubuntu
+   price: 0
+  
+office_software:
+ - name: Office 2003
+   price: 200
+ - name: Office 2007 Standard
+   price: 300
+ - name: Office 2007 Premium
+   price: 400
+  
+warranty:
+ - name: "1 Year Warranty"
+   price: 20
+ - name: "2 Year Warranty"
+   price: 50
+ - name: "3 Year Warranty"
+   price: 80
+ - name: "Lifetime Warranty"
+   price: 500
+  
+ram_memory:
+ - name: 1GB DDR2 RAM
+   price: 30
+ - name: 2GB DDR2 RAM
+   price: 60
+ - name: 4GB DDR2 RAM
+   price: 120
+  
+hard_drive:
+ - name: 100GB 5400RPM Hard Drive
+   price: 60
+ - name: 250GB 5400RPM Hard Drive
+   price: 60
+ - name: 500GB 5400RPM Hard Drive
+   price: 60
+ - name: 1TB 7200RPM Hard Drive
+   price: 60
+    
+monitors:
+ - name: 17inch Monitor
+   price: 400
+ - name: 19inch Monitor
+   price: 400
+ - name: 21inch Monitor
+   price: 400
+ - name: 24inch Monitor
+   price: 400
